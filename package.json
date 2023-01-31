@@ -1,0 +1,24 @@
+{
+  "name": "transportation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/main.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "sass sass/main.scss css/main.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/main.css -o css/style.prefix.css",
+    "bulid:css": "npm-run-all compile:sass  prefix:css "
+  },
+  "author": "Nasrat",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "concat": "^1.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.57.1"
+  }
+}
